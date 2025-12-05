@@ -8,6 +8,18 @@ let incremento =
 // if (localStorage.getItem('incremento') == null) {
 // }
 let j = 1;
+
+window.onload = (event) => {
+
+  let itensUl = document.getElementById('itensUl');
+  itensUl.innerHTML = '';
+  
+  for (let i = 1; i < incremento.valor; i++) {
+    itensUl.insertAdjacentHTML('beforeend', `<li>${i}</li>`);
+    
+  }
+};
+
 while (j < incremento.valor) {
   // Recuperar o elemento da lista desordenada
   let itensUl = document.getElementById('itensUl');
